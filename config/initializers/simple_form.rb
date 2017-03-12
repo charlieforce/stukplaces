@@ -28,11 +28,7 @@ SimpleForm.setup do |config|
     # extensions by default, you can change `b.optional` to `b.use`.
 
     # Calculates maxlength from length validations for string inputs
-    # and/or database column lengths
     b.optional :maxlength
-
-    # Calculate minlength from length validations for string inputs
-    b.optional :minlength
 
     # Calculates pattern from format validations for string inputs
     b.optional :pattern
@@ -94,7 +90,8 @@ SimpleForm.setup do |config|
   # config.collection_wrapper_class = nil
 
   # You can wrap each item in a collection of radio/check boxes with a tag,
-  # defaulting to :span.
+  # defaulting to :span. Please note that when using :boolean_style = :nested,
+  # SimpleForm will force this option to be a label.
   # config.item_wrapper_tag = :span
 
   # You can define a class to use in all item wrappers. Defaulting to none.
@@ -121,7 +118,7 @@ SimpleForm.setup do |config|
   # in this configuration, which is recommended due to some quirks from different browsers.
   # To stop SimpleForm from generating the novalidate option, enabling the HTML5 validations,
   # change this configuration to true.
-  config.browser_validations = false
+  config.browser_validations = true
 
   # Collection of methods to detect if a file type was given.
   # config.file_methods = [ :mounted_as, :file?, :public_filename ]

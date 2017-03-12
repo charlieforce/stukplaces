@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Stukplaces</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Stuckplaces</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCflV3W-EUf4thbz2lcmq3VGycAdOfP07o"></script>-->
+</head>
+<body>
+<%= render "layouts/header" %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<!--
+ <% flash.each do |type, message| %>
+ 		<div class="alert alert-info fade-in">
+ 		<button class="close" data-dismiss="alert">X</button>
+ 		<%= message %>
+ 		</div>
+ <%end%>
+-->
 
-  <body>
-    <%= yield %>
-  </body>
+<% if notice %>
+    <div id="notice_wrapper">
+        <p class="notice"><%= notice %></p>
+    </div>
+<% elsif %>
+    <div id="notice_wrapper">
+        <p class="alert"><%= alert %></p>
+    </div>
+<% end %>
+
+<div class="container">
+<%= yield %>
+</div>
+</body>
 </html>

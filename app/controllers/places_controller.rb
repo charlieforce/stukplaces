@@ -6,7 +6,7 @@ class PlacesController < ApplicationController
 
   def index
     @places = Place.search(params[:search])
-    respond_with(@places)
+    # respond_with(@places)
   end
 
   def show
@@ -33,7 +33,7 @@ class PlacesController < ApplicationController
         format.json { render :show, status: :created, location: @place }
       else
         format.html { render :new }
-        format.json { render json: @place.errors, status: :unprocessable_entity }        
+        format.json { render json: @place.errors, status: :unprocessable_entity }
       end
     end
   end

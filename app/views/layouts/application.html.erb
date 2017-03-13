@@ -5,32 +5,19 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <!--
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCflV3W-EUf4thbz2lcmq3VGycAdOfP07o"></script>-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwkHM3n5O6oel0H3bGT3Lz-tXtaIiCT5Q&callback=initMap"
+    async defer></script>
 </head>
 <body>
 <%= render "layouts/header" %>
-
-<!--
- <% flash.each do |type, message| %>
- 		<div class="alert alert-info fade-in">
- 		<button class="close" data-dismiss="alert">X</button>
- 		<%= message %>
- 		</div>
- <%end%>
--->
-
-<% if notice %>
-    <div id="notice_wrapper">
-        <p class="notice"><%= notice %></p>
-    </div>
-<% elsif %>
-    <div id="notice_wrapper">
-        <p class="alert"><%= alert %></p>
-    </div>
+<% flash.each do |type, message| %>
+<div class="alert alert-info fade-in">
+<button class="close" data-dismiss="alert">x</button>
+<%= message %>
+</div>
 <% end %>
-
 <div class="container">
+
 <%= yield %>
 </div>
 </body>

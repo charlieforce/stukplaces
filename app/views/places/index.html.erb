@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Places</h1>
 
 <table class="table">
@@ -7,23 +5,18 @@
     <tr>
       <th>Name</th>
       <th>Address</th>
-      <th>Description</th>
       <th>Phone</th>
       <th>Website</th>
-      <th>Average</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @places.each do |place| %>
       <tr>
-        <td><%= link_to place.name, place_path(place) %></td>
+        <td><%= place.name  %></td>
         <td><%= place.address %></td>
-        <td><%= place.description %></td>
         <td><%= place.phone %></td>
         <td><%= place.website %></td>
-        <td><div class="average_<%=place.id%>"></div></td>
       </tr>
     <% end %>
   </tbody>
@@ -46,4 +39,3 @@
 <% if current_user %>
 <%= link_to 'New Place', new_place_path %>
 <% end %>
-

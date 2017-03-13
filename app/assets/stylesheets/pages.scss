@@ -3,25 +3,51 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .alert {
-	
+
 	position: absolute;
 	z-index: 1;
 	width: 200px;
 }
 
-#notice_wrapper {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    background: rgba(135, 216, 211, 0.85);
-    .alert, .notice {
-        padding: 2.5rem 0;
-        text-align: center;
-        margin: 0;
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: #FFFFFF;
-        letter-spacing: 1px;
-    }
+.landing_title {
+	padding-top: 200px;
 }
+
+.landing {
+background: image-url("image1.jpg") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 100vh;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.btn-landing {
+	background: none;
+	border: solid;
+}
+
+.btn-landing:hover {
+	background: none;
+	border-color: white;
+}
+// #notice_wrapper {
+//     position: absolute;
+//     top: 0;
+//     width: 100%;
+//     z-index: 999;
+//     background: rgba(135, 216, 211, 0.85);
+//     .alert, .notice {
+//         padding: 2.5rem 0;
+//         text-align: center;
+//         margin: 0;
+//         font-size: 1.25rem;
+//         font-weight: 700;
+//         color: #FFFFFF;
+//         letter-spacing: 1px;
+//     }
+// }
